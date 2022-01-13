@@ -1,0 +1,298 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+
+body {
+    
+    background-color:rgba(132, 164, 206, 0.514) ;
+    color: rgb(46, 57, 80);
+    font-family: 'Baloo Bhaijaan 2', cursive;
+}
+th, td { 
+    border: 1px solid rgba(187, 187, 248, 0.89);
+    padding: 0.5em 1em;
+    background-color: rgba(238, 238, 238, 0.637);
+}
+   /*****Estilos barra de navecgación*****/
+
+/*.container-sales-branch {
+    display: flex;
+    padding: 2em;
+    justify-content: center;
+  
+
+}
+
+ table, th, td {
+    border-collapse: collapse;
+   
+}
+
+
+.sales-container{
+    display: flex;
+    justify-content: center;
+}
+
+.inventario-completo{
+    display: flex;
+    justify-content: center;
+   
+}
+
+
+/*My-Modal*/
+
+ .mysection-modal{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    background-color:rgba(0, 0, 0, 0.479);
+    left: 0;
+    top: 0;
+    z-index: 1;
+    display: none;
+
+}
+.mysection-modal-edit{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    background-color:rgba(0, 0, 0, 0.479);
+    left: 0;
+    top: 0;
+    z-index: 1;
+    display: none;
+ 
+
+}
+
+
+.modal-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    /* background: rgb(241,240,255); */
+    /* background: linear-gradient(
+90deg, rgba(241,240,255,1) 0%, rgba(197,202,228,1) 100%, rgba(190,209,230,1) 100%); */
+    /* padding: 1em 2em; */
+    margin: 1em auto;
+    
+    /* border-radius: 0.5em; */
+    width: 40%;
+    max-width: 1000px;
+    /* border: 1px solid black; */
+
+}
+
+.modal-container-edit {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    /* background: rgb(241,240,255); */
+    /* background: linear-gradient(
+90deg, rgba(241,240,255,1) 0%, rgba(197,202,228,1) 100%, rgba(190,209,230,1) 100%); */
+    /* padding: 1em 2em; */
+    margin: 9em 3em;
+    /* border-radius: 0.5em; */
+    width: 40%;
+    max-width: 1000px;
+    /* border: 1px solid black; */
+
+}
+
+.container-sales {
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 0.5em; */
+    background: rgb(197 202 228);
+    padding: 1em;
+
+}
+select {
+    border: none;
+    border-radius: 0.5em;
+    padding: 0.4em;
+    font-size: 1.2rem;
+
+}
+
+
+.my-modal-remove{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    background-color:rgba(0, 0, 0, 0.479);
+    left: 0;
+    top: 0;
+    z-index: 1;
+    display: none
+   
+}
+
+.remove {
+   /* ;*/
+   display: flex;
+   flex-direction: column;
+   /* border: 104px solid black; */
+   /* background: rgb(241,240,255); */
+   /* background: linear-gradient(
+90deg, rgba(241,240,255,1) 0%, rgba(197,202,228,1) 100%, rgba(190,209,230,1) 100%); */
+   /* text-align: center; */
+   /* height: 37%; */
+   width: 55%;
+   max-width: 1200px;
+   /* margin: 11.7em 5em; */
+   /* border-radius: 8.2em; */
+   flex-wrap: nowrap;
+   justify-content: center;
+    
+}
+
+/*********** TITULOS *******/
+
+.title-remove{
+    width: 100%;
+    background-color: rgb(197 202 228);
+    padding: 1em;
+    text-align: initial;
+    border-radius: 0.1em;
+}
+
+.title-two {
+    background: rgb(241 240 255);
+    width: 100%;
+    padding: 2em;
+    text-align: initial;
+}
+.title-new {
+    background: white;
+    /* margin: 0.5em; */
+    padding: 1em;
+
+}
+.title-edit{
+    background: white;
+    /* margin: 0.5em; */
+    padding: 1em;
+
+}
+.parrafo {
+    font-size: 0.8rem;
+}
+
+p {
+    padding: 1em;
+}
+/***** Boton ***/
+
+.btn-remove-cancel, .btn-save-cancel{
+    
+    width: 100%;
+    background: rgb(197 202 228);
+    padding: 1em;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+.btn-remove{
+    margin-top: 0.5em;
+    background: #ff000059;
+
+}
+.btn-save  {
+    margin-top: 0.5em;
+    background: #0080008f;
+}
+
+input  {
+    
+    padding: 0.4em;
+    border-radius: 0.7em;
+    border: none;
+    padding: 0.4em;
+    font-size: 1.2rem;
+    font-family: unset;
+
+}
+.new{
+        background: transparent;
+        padding: 0.4em;
+        border-radius: 0.7em;
+        border: none;
+        /* margin-top: 0.5em; */
+        /* padding: 0.4em; */
+        font-size: 1.2rem;
+        font-family: unset;
+        font-family: 'Signika', sans-serif;
+    
+}
+.fa-window-restore{
+        padding: 0 0.5em;
+        background: #0000ff40;
+        border-radius: 0.5em;
+    
+}
+
+.sales-branch {
+       
+     background: #ebebf3;
+     width: 50%;
+     margin: 2em;
+    
+}
+
+.inventario-completo {
+    background: #ebebf3;
+    margin: 2em;
+    
+}
+
+.container-sales-branch{
+    
+    justify-content: center;
+    display: flex;
+    /* flex-direction: row; */
+    /* flex-wrap: nowrap; */
+    width: 100%;
+
+}
+.sales-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    
+}
+
+.title-table {
+    background: white;
+    padding: 0.5em;
+    display: flex;
+    justify-content: space-between;
+}
+
+table {
+    width: 100%;
+}
+.productos-start {
+    padding: 0.5em;
+}
+

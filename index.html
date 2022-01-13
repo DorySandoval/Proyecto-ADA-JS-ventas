@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>ventas</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel = "preconnect" href = "https://fonts.googleapis.com">
+        <link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin>
+         <link href = "https: //fonts.googleapis.com/css2? family = Signika: wght @ 300 & display = swap "rel =" stylesheet ">
+</head>
+    <body>
+      <nav class="nav-title">
+          <h1>VentasOnline</h1>
+      </nav>
+      <main>
+          <section class="sales-container">
+            <div class="container-sales-branch">
+              <div class="sales-branch">
+               
+                <div class="title-table">
+                  <h1>Ventas por Sucursal</h1>
+                </div>
+
+                  <table class="branch-table">
+                      <tr>
+                       <th>Sucursal</th>
+                       <th>Total ventas</th>
+                      </tr>
+                      <tr>
+                        <td>Caballito</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>Centro</td>
+                        <td></td>
+                      </tr>
+                  </table>
+              </div>
+              <div class="sales-branch">
+                
+                  <div class="title-table">
+                    <h1>Reportes</h1>
+                  </div>
+                 
+                  <div class="productos-start">
+                    <p class="start">Producto estrella:</p>
+                    <p class="sales-strart">Vendedora estrella:</p>
+                  </div>
+            </div>
+          </div>
+          </section>
+          <section class="inventario-completo">   
+            <div class="title-table">
+              <h1>Ventas</h1>
+              <i class="far fa-window-restore"><input class="new" type="submit" id="open-sales" value="Nueva venta"></i>
+            </div>
+          <table class="branch-table" id="table">
+           <thead class="th-branch">
+            <tr>
+                <th>Fecha</th>
+                <th>Venderora</th>
+                <th>Sucursal</th>
+                <th>Componentes</th>
+                <th>Precio </th>
+                <th>Acciones</th>
+            </tr>
+           </thead>
+          </table>
+          </section>
+    
+          <section class="mysection-modal" id="new-sales">
+            <div class="modal-container">
+              <div class="title-new">
+                <h1>Agregar venta</h1>
+              </div>
+             <div class="container-sales">
+              <label class="sur-name" for="surname">Venderora</label>
+              <select id="sales-Name">
+                <!--se agrega los <option> por JS-->
+              </select>             
+             </div>
+             <div class="container-sales">
+              <label class="sur-name" for="sur-name">Componentes</label>
+              <select id="componentes">
+               <!-- <option id="producto" value="Monitor GPRS 3000">Monitor GPRS 3000</option>
+                <option id="producto" value="Motherboard ASUS 1500">Motherboard ASUS 1500</option>
+                <option id="producto" value="Monitor ASC 543">Monitor ASC 543</option>
+                <option id="producto" value="Motherboard ASUS 1200">Motherboard ASUS 1200</option>
+                <option id="producto" value="Motherboard MZI">Motherboard MZI</option>
+                <option id="producto" value="HDD Toyiva">HDD Toyiva</option>
+                <option id="producto" value="HDD Wezter Dishital">HDD Wezter Dishital</option>
+                <option id="producto" value="RAM Quinston">RAM Quinston</option>
+                <option id="producto" value="RAM Quinston Fury">RAM Quinston Fury</option>-->
+              </select>  
+             </div>
+             <div class="container-sales">
+              <label class="sur-name" for="surname">Sucursal</label>
+              <select id="sucursales">
+               <!--<option id="suc" value="Centro">Centro</option>
+                <option  id="suc" value="Caballito">Caballito</option>--> 
+              </select>   
+             </div>
+             <div class="container-sales">
+              <label class="label-date" for="data">Fecha</label>
+              <input type="date" class="input-date" name="date" id="date-fecha" placeholder="Fecha" required value=" ">
+             </div>
+             <div class="btn-save-cancel">
+               <input class="cancel" type="button" id="cancel-sales" value="Cancelar"> 
+               <input class="btn-save"   type="button" id="save" value="Guardar" onclick="capturarValor()">
+             </div>
+            </div>
+          </section>
+          <section class="mysection-modal-edit">
+            <div class="modal-container-edit">
+              <div class="title-edit">
+                <h1>Editar venta</h1>
+              </div>
+             <div class="container-sales">
+              <label class="sur-name" for="surname">Venderora</label>
+              <select name="sales-name">
+               <!-- <option value="ada">Ada</option>
+                <option value="grace">Grace</option>
+                <option value="hedy">Hedy</option>
+                <option value="shery">Shery</option>-->
+              </select>             
+             </div>
+             <div class="container-sales">
+              <label class="sur-name" for="surname">Componentes</label>
+              <select name="Componentes">
+             <!-- <option value="com-a">Monitor GPRS 3000</option>
+                <option value="com-b">Motherboard ASUS 1500</option>
+                <option value="com-c">Monitor ASC 543</option>
+                <option value="com-d">Motherboard ASUS 1200</option>
+                <option value="com-e">Motherboard MZI</option>
+                <option value="com-f">HDD Toyiva</option>
+                <option value="com-g">HDD Wezter Dishital</option>
+                <option value="com-h">RAM Quinston</option>
+                <option value="com-i">RAM Quinston Fury</option>-->  
+              </select>  
+             </div>
+             <div class="container-sales">
+              <label class="sur-name" for="surname">Sucursal</label>
+              <select name="sales-sucursal">
+               <!-- <option value="Centro">Centro</option>
+                <option value="Caballito">Caballito</option>-->
+              </select>   
+             </div>
+             <div class="container-sales">
+              <label class="label-date" for="data">Fecha</label>
+              <input type="date" class="input-date" name="date" id="date" placeholder="Fecha" required>
+             </div>
+             <div class="btn-save-cancel">
+               <input class="cancel" type="button" id="cancel-edit" value="Cancelar"> 
+               <input class="btn-save"   type="button" id="save-edit" value="Guardar">
+             </div>
+            </div>
+          </section>
+          <section class="my-modal-remove">
+            <div class="remove">
+              <div class="title-remove">
+                <h1>Eliminar venta</h1>
+              </div>
+              <div class="title-two">
+                <h2>¿Estás segura?</h2>
+                <p class="parrafo">Esta acción no se puede revertir</p>
+              </div>  
+              <div class="btn-remove-cancel">
+                <input class="bnt-cancel" type="button" id="cancel" value="Cancelar"> 
+                <input class="btn-remove" type="button" id="remove" value="Eliminar">
+              </div>            
+            </div>
+          </section>
+         <script src="./JS/ventas.js"></script>
+      </main>
+     
+    </body>
+</html>
