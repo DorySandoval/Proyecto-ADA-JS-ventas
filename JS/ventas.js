@@ -98,7 +98,33 @@ const agregarDatos = () => {
   datosVenta.push(nuevaVenta);
   console.log(datosVenta);
 
-document.getElementById("table").innerHTML+='<tbody><td>'+nuevaVenta.fecha+'</td><td>'+nuevaVenta.vendedora+'</td><td>'+nuevaVenta.sucursal+'</td><td>'+nuevaVenta.componente+'</td><td>'+nuevaVenta.precio+'</td></tbody>'
+  let newTable = document.getElementById("table");
+let insertTable = newTable.insertRow(-1) //crea una fila
+
+let insertCell = insertTable.insertCell(0) //crea una celda
+insertCell.textContent = nuevaVenta.fecha;
+
+insertCell = insertTable.insertCell(1)
+insertCell.textContent = nuevaVenta.vendedora;
+
+insertCell = insertTable.insertCell(2)
+insertCell.textContent = nuevaVenta.sucursal;
+
+insertCell = insertTable.insertCell(3)
+insertCell.textContent = nuevaVenta.componente;
+
+insertCell = insertTable.insertCell(4)
+insertCell.textContent = nuevaVenta.precio;
+
+let removeTable = insertTable.insertCell(5)
+let btnRemove = document.createElement("button");
+btnRemove.innerHTML= 'eliminar'
+//removeTable.appendChild(btnRemove);
+
+//btnRemove.addEventListener('click', () =>{
+ //remove()
+//})
+//document.getElementById("table").innerHTML+='<tbody><td>'+nuevaVenta.fecha+'</td><td>'+nuevaVenta.vendedora+'</td><td>'+nuevaVenta.sucursal+'</td><td>'+nuevaVenta.componente+'</td><td>'+nuevaVenta.precio+'</td></tbody>'
 }
 
 
